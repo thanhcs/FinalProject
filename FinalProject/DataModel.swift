@@ -101,7 +101,7 @@ class DataModel: NSObject {
         e.setValue(event.date, forKey: "date")
         e.setValue(event.location, forKey: "location")
         e.setValue(event.host, forKey: "host")
-        e.setValue(event.desc, forKey: "description")
+        e.setValue(event.desc, forKey: "desc")
         e.setValue(event.capacity, forKey: "capacity")
         
         // Commit the changes.
@@ -142,7 +142,7 @@ class DataModel: NSObject {
                     let date:String = (object.valueForKey("date") as? String)!
                     let location:String = (object.valueForKey("location") as? String)!
                     let host:String = (object.valueForKey("host") as? String)!
-                    let description:String = (object.valueForKey("description") as? String)!
+                    let description:String = (object.valueForKey("desc") as? String)!
                     let capacity:Int = (object.valueForKey("capacity") as? Int)!
                     let temp = Event(title: title, date: date, location: location, host: host, description: description, capacity: capacity)
                     self.events.append(temp)

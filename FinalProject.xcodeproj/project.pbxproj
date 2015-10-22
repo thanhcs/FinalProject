@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B268E4E61BD9638B00ACF519 /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B268E4E51BD9638B00ACF519 /* MainTableViewController.swift */; };
+		B268E5091BD9818D00ACF519 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B268E5081BD9818D00ACF519 /* UserViewController.swift */; };
+		B268E50D1BD9967F00ACF519 /* AddNewEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B268E50C1BD9967F00ACF519 /* AddNewEventViewController.swift */; };
+		B268E50F1BD99F3000ACF519 /* EditTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B268E50E1BD99F3000ACF519 /* EditTableViewController.swift */; };
 		B2F406611BD8F6A900646397 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F406601BD8F6A900646397 /* AppDelegate.swift */; };
 		B2F406631BD8F6A900646397 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F406621BD8F6A900646397 /* ViewController.swift */; };
 		B2F406661BD8F6A900646397 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2F406641BD8F6A900646397 /* Main.storyboard */; };
@@ -19,6 +23,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B268E4E51BD9638B00ACF519 /* MainTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTableViewController.swift; sourceTree = "<group>"; };
+		B268E5081BD9818D00ACF519 /* UserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
+		B268E50C1BD9967F00ACF519 /* AddNewEventViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddNewEventViewController.swift; sourceTree = "<group>"; };
+		B268E50E1BD99F3000ACF519 /* EditTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditTableViewController.swift; sourceTree = "<group>"; };
 		B2F4065D1BD8F6A900646397 /* FinalProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FinalProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2F406601BD8F6A900646397 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B2F406621BD8F6A900646397 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -64,6 +72,7 @@
 			children = (
 				B2F406601BD8F6A900646397 /* AppDelegate.swift */,
 				B2F406621BD8F6A900646397 /* ViewController.swift */,
+				B268E4E51BD9638B00ACF519 /* MainTableViewController.swift */,
 				B2F406641BD8F6A900646397 /* Main.storyboard */,
 				B2F4066A1BD8F6A900646397 /* Assets.xcassets */,
 				B2F4066C1BD8F6A900646397 /* LaunchScreen.storyboard */,
@@ -72,6 +81,9 @@
 				B2F406761BD8F6C000646397 /* Event.swift */,
 				B2F406791BD8F70800646397 /* DataModel.swift */,
 				B2F406671BD8F6A900646397 /* FinalProject.xcdatamodeld */,
+				B268E5081BD9818D00ACF519 /* UserViewController.swift */,
+				B268E50C1BD9967F00ACF519 /* AddNewEventViewController.swift */,
+				B268E50E1BD99F3000ACF519 /* EditTableViewController.swift */,
 			);
 			path = FinalProject;
 			sourceTree = "<group>";
@@ -148,11 +160,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				B2F406771BD8F6C000646397 /* User.swift in Sources */,
+				B268E5091BD9818D00ACF519 /* UserViewController.swift in Sources */,
+				B268E50D1BD9967F00ACF519 /* AddNewEventViewController.swift in Sources */,
+				B268E50F1BD99F3000ACF519 /* EditTableViewController.swift in Sources */,
 				B2F406631BD8F6A900646397 /* ViewController.swift in Sources */,
 				B2F406611BD8F6A900646397 /* AppDelegate.swift in Sources */,
 				B2F406691BD8F6A900646397 /* FinalProject.xcdatamodeld in Sources */,
 				B2F406781BD8F6C000646397 /* Event.swift in Sources */,
 				B2F4067A1BD8F70800646397 /* DataModel.swift in Sources */,
+				B268E4E61BD9638B00ACF519 /* MainTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,6 +316,7 @@
 				B2F406741BD8F6A900646397 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
