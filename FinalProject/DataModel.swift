@@ -40,6 +40,10 @@ class DataModel: NSObject {
         return events.count
     }
     
+    func getEvent(index index:Int) -> Event {
+        return events[index]
+    }
+    
     func addEvent(title title:String, date:String, location:String, host:String, description:String, capacity:Int) {
         let temp = Event(title: title, date: date, location: location, host: host, description: description, capacity: capacity)
         events.append(temp)
