@@ -11,9 +11,10 @@
     <entity name="User" syncable="YES">
         <attribute name="password" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="username" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="hosting" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Event" syncable="YES"/>
     </entity>
     <elements>
-        <element name="User" positionX="-63" positionY="-18" width="128" height="75"/>
         <element name="Event" positionX="-54" positionY="9" width="128" height="135"/>
+        <element name="User" positionX="99" positionY="-135" width="128" height="88"/>
     </elements>
 </model>
