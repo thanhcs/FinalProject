@@ -68,6 +68,12 @@ class MainTableViewController: UITableViewController {
             let view = (segue.destinationViewController as? UserViewController)!
             view.data = data
         }
+        if segue.identifier == "EDSegue" {
+            let eventDetails =  segue.destinationViewController as! EventDetailsViewController
+            let index = self.tableView.indexPathForSelectedRow!
+            eventDetails.path = index
+            eventDetails.data = data
+        }
     }
 
 }

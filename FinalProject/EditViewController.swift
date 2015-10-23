@@ -19,6 +19,7 @@ class EditViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var hostTextField: UITextField!
     @IBOutlet weak var descriptionTextField: UITextField!
     @IBOutlet weak var capacityTextField: UITextField!
+    @IBOutlet weak var alertEmpty: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,7 +50,12 @@ class EditViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func updateEvent(sender: AnyObject) {
         // TODO: need to check if nil
+        if (dateTextField.text == "" || locationTextField.text == "" || hostTextField.text == "" || descriptionTextField.text == "" || capacityTextField.text == "") {
+            alertEmpty.text = "You have to fill in all information"
+        } else {
         data?.UpdateEvent(index: index, title: titleLabel.text!, date: dateTextField.text!, location: locationTextField.text!, host: hostTextField.text!, description: descriptionTextField.text!, capacity: Int(capacityTextField.text!)!)
+            alertEmpty.text = "Saved!"
+        }
     }
     
     // dismiss the keyboard when touching anywhere

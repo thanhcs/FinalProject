@@ -16,6 +16,7 @@ class AddNewEventViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var hostTextField: UITextField!
     @IBOutlet weak var descriptionTextField: UITextField!
     @IBOutlet weak var capacityTextField: UITextField!
+    @IBOutlet weak var alertEmpty: UILabel!
     
     var data:DataModel? = nil
 
@@ -39,10 +40,14 @@ class AddNewEventViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func saveEvent(sender: AnyObject) {
-        // TODO: need to check nil
+        // need to check nil
+        if (titleTextField.text == "" || dateTextField.text == "" || locationTextField.text == "" || hostTextField.text == "" || descriptionTextField.text == "" || capacityTextField.text == "") {
+            alertEmpty.text = "You have to fill in all information!"
+        } else {
         data?.addEvent(title: titleTextField.text!, date: dateTextField.text!, location: locationTextField.text!, host: hostTextField.text!, description: descriptionTextField.text!, capacity: Int(capacityTextField.text!)!)
         
         navigationController?.popViewControllerAnimated(true)
+        }
     }
     
     // dismiss the keyboard when touching anywhere
