@@ -14,7 +14,6 @@ class EventDetailsViewController: UIViewController {
     var data:DataModel? = nil
     var path: NSIndexPath!
     
-    
     @IBOutlet weak var titleLabel: UILabel!
     
     @IBOutlet weak var DateLabel: UILabel!
@@ -30,6 +29,8 @@ class EventDetailsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.navigationItem.title = "Event Detail"
         
         let index = path.row
         let event = data?.getEvent(index: index)
