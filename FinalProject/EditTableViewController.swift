@@ -87,14 +87,21 @@ class EditTableViewController: UITableViewController {
     }
     */
 
-    /*
+
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        
+        if (segue.identifier == "editViewSegue") {
+            let indexPath:NSIndexPath = self.tableView.indexPathForSelectedRow!
+            let view = segue.destinationViewController as! EditViewController
+            view.data = data
+            view.index = indexPath.row
+            
+        }
     }
-    */
 
 }

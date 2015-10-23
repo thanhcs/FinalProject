@@ -22,6 +22,7 @@ class Event: NSObject {
         _title = title
         _date = date
         _location = location
+        _host = host
 //        _tags = tags
         _description = description
         _capacity = capacity
