@@ -211,7 +211,7 @@
                                 <rect key="frame" x="119" y="359" width="236" height="30"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BM2-HC-qIn">
                                 <rect key="frame" x="170" y="439" width="34" height="30"/>
@@ -286,13 +286,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Otk-qc-yme">
-                                <rect key="frame" x="58" y="136" width="34" height="21"/>
-                                <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nww-Ax-mfs">
                                 <rect key="frame" x="56" y="181" width="36" height="21"/>
                                 <animations/>
@@ -328,12 +321,6 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DiM-Ll-Taa">
-                                <rect key="frame" x="119" y="132" width="236" height="30"/>
-                                <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VS7-lk-ajv">
                                 <rect key="frame" x="119" y="177" width="236" height="30"/>
                                 <animations/>
@@ -362,20 +349,23 @@
                                 <rect key="frame" x="119" y="378" width="236" height="30"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Otk-qc-yme">
+                                <rect key="frame" x="20" y="92" width="335" height="57"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cUY-Wh-1aa">
-                                <rect key="frame" x="94" y="458" width="50" height="30"/>
+                                <rect key="frame" x="162" y="458" width="50" height="30"/>
                                 <animations/>
                                 <state key="normal" title="Save"/>
                                 <connections>
                                     <action selector="saveEvent:" destination="mgj-UE-ugo" eventType="touchUpInside" id="bxG-hP-lyV"/>
+                                    <action selector="updateEvent:" destination="zkY-qN-8jg" eventType="touchUpInside" id="fJW-WY-Zo7"/>
                                 </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mxa-Fo-VXa">
-                                <rect key="frame" x="251" y="458" width="45" height="30"/>
-                                <animations/>
-                                <state key="normal" title="Delete"/>
                             </button>
                         </subviews>
                         <animations/>
@@ -388,7 +378,7 @@
                         <outlet property="descriptionTextField" destination="upg-sj-wy9" id="hEK-V5-5ed"/>
                         <outlet property="hostTextField" destination="8bL-uR-r3M" id="eyA-AO-v0n"/>
                         <outlet property="locationTextField" destination="KEs-P1-NZY" id="VXG-aD-9CO"/>
-                        <outlet property="titleTextField" destination="DiM-Ll-Taa" id="fAk-1X-J5z"/>
+                        <outlet property="titleLabel" destination="Otk-qc-yme" id="J7Q-HY-WXU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OCo-L6-27o" userLabel="First Responder" sceneMemberID="firstResponder"/>

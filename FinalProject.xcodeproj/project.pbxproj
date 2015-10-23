@@ -13,7 +13,6 @@
 		B268E50F1BD99F3000ACF519 /* EditTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B268E50E1BD99F3000ACF519 /* EditTableViewController.swift */; };
 		B268E5111BD9A78100ACF519 /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B268E5101BD9A78100ACF519 /* EditViewController.swift */; };
 		B2F406611BD8F6A900646397 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F406601BD8F6A900646397 /* AppDelegate.swift */; };
-		B2F406631BD8F6A900646397 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F406621BD8F6A900646397 /* ViewController.swift */; };
 		B2F406661BD8F6A900646397 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2F406641BD8F6A900646397 /* Main.storyboard */; };
 		B2F406691BD8F6A900646397 /* FinalProject.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B2F406671BD8F6A900646397 /* FinalProject.xcdatamodeld */; };
 		B2F4066B1BD8F6A900646397 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2F4066A1BD8F6A900646397 /* Assets.xcassets */; };
@@ -31,7 +30,6 @@
 		B268E5101BD9A78100ACF519 /* EditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
 		B2F4065D1BD8F6A900646397 /* FinalProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FinalProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2F406601BD8F6A900646397 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B2F406621BD8F6A900646397 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B2F406651BD8F6A900646397 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B2F406681BD8F6A900646397 /* FinalProject.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FinalProject.xcdatamodel; sourceTree = "<group>"; };
 		B2F4066A1BD8F6A900646397 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -73,20 +71,19 @@
 			isa = PBXGroup;
 			children = (
 				B2F406601BD8F6A900646397 /* AppDelegate.swift */,
-				B2F406621BD8F6A900646397 /* ViewController.swift */,
 				B268E4E51BD9638B00ACF519 /* MainTableViewController.swift */,
-				B2F406641BD8F6A900646397 /* Main.storyboard */,
-				B2F4066A1BD8F6A900646397 /* Assets.xcassets */,
-				B2F4066C1BD8F6A900646397 /* LaunchScreen.storyboard */,
-				B2F4066F1BD8F6A900646397 /* Info.plist */,
-				B2F406751BD8F6C000646397 /* User.swift */,
-				B2F406761BD8F6C000646397 /* Event.swift */,
-				B2F406791BD8F70800646397 /* DataModel.swift */,
-				B2F406671BD8F6A900646397 /* FinalProject.xcdatamodeld */,
 				B268E5081BD9818D00ACF519 /* UserViewController.swift */,
 				B268E50C1BD9967F00ACF519 /* AddNewEventViewController.swift */,
 				B268E50E1BD99F3000ACF519 /* EditTableViewController.swift */,
 				B268E5101BD9A78100ACF519 /* EditViewController.swift */,
+				B2F406751BD8F6C000646397 /* User.swift */,
+				B2F406761BD8F6C000646397 /* Event.swift */,
+				B2F406791BD8F70800646397 /* DataModel.swift */,
+				B2F406641BD8F6A900646397 /* Main.storyboard */,
+				B2F406671BD8F6A900646397 /* FinalProject.xcdatamodeld */,
+				B2F4066A1BD8F6A900646397 /* Assets.xcassets */,
+				B2F4066C1BD8F6A900646397 /* LaunchScreen.storyboard */,
+				B2F4066F1BD8F6A900646397 /* Info.plist */,
 			);
 			path = FinalProject;
 			sourceTree = "<group>";
@@ -166,7 +163,6 @@
 				B268E5091BD9818D00ACF519 /* UserViewController.swift in Sources */,
 				B268E50D1BD9967F00ACF519 /* AddNewEventViewController.swift in Sources */,
 				B268E50F1BD99F3000ACF519 /* EditTableViewController.swift in Sources */,
-				B2F406631BD8F6A900646397 /* ViewController.swift in Sources */,
 				B2F406611BD8F6A900646397 /* AppDelegate.swift in Sources */,
 				B2F406691BD8F6A900646397 /* FinalProject.xcdatamodeld in Sources */,
 				B2F406781BD8F6C000646397 /* Event.swift in Sources */,

@@ -50,6 +50,92 @@ class DataModel: NSObject {
         saveEvent(temp)
     }
     
+    func UpdateEvent(index index:Int, title:String, date:String, location:String, host:String, description:String, capacity:Int) {
+        
+        // update temp store
+        events[index].date = date
+        events[index].location = location
+        events[index].host = host
+        events[index].desc = description
+        events[index].capacity = capacity
+        
+        // update core data
+        
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        
+        let managedContext = appDelegate.managedObjectContext
+        
+        let fetchRequest = NSFetchRequest(entityName:"Event")
+        
+        // filter the candidate needed
+        fetchRequest.predicate = NSPredicate(format: "title = %@", title)
+        
+        var fetchedResults:[NSManagedObject]? = nil
+        
+        do {
+            fetchedResults = try managedContext.executeFetchRequest(fetchRequest) as? [NSManagedObject]
+            let element = fetchedResults?.first
+            element!.setValue(date, forKey: "date")
+            element!.setValue(location, forKey: "location")
+            element!.setValue(host, forKey: "host")
+            element!.setValue(description, forKey: "desc")
+            element!.setValue(capacity, forKey: "capacity")
+        } catch {
+            // what to do if an error occurs?
+            let nserror = error as NSError
+            NSLog("Unresolved error \(nserror), \(nserror.userInfo)")
+            abort()
+        }
+        do {
+            try managedContext.save()
+        } catch {
+            // what to do if an error occurs?
+            let nserror = error as NSError
+            NSLog("Unresolved error \(nserror), \(nserror.userInfo)")
+            abort()
+        }
+    }
+    
+    func deleteEvent(index index:Int) {
+        // Core Data
+        // update core data
+        
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        
+        let managedContext = appDelegate.managedObjectContext
+        
+        let fetchRequest = NSFetchRequest(entityName:"Event")
+        
+        // filter the candidate needed
+        fetchRequest.predicate = NSPredicate(format: "title = %@", events[index].title)
+        fetchRequest.predicate = NSPredicate(format: "host = %@", events[index].host)
+        
+        var fetchedResults:[NSManagedObject]? = nil
+        
+        do {
+            fetchedResults = try managedContext.executeFetchRequest(fetchRequest) as? [NSManagedObject]
+            if let entityToDelete = fetchedResults?.first {
+                managedContext.deleteObject(entityToDelete)
+            }
+        } catch {
+            // what to do if an error occurs?
+            let nserror = error as NSError
+            NSLog("Unresolved error \(nserror), \(nserror.userInfo)")
+            abort()
+        }
+        do {
+            try managedContext.save()
+        } catch {
+            // what to do if an error occurs?
+            let nserror = error as NSError
+            NSLog("Unresolved error \(nserror), \(nserror.userInfo)")
+            abort()
+        }
+        
+        // local array
+        events.removeAtIndex(index)
+    }
+    
     func addUser(username username:String, password:String) {
         let temp = User (username: username, password: password)
         users.append(temp)

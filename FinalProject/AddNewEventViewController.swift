@@ -8,26 +8,29 @@
 
 import UIKit
 
-class AddNewEventViewController: UIViewController {
+class AddNewEventViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var titleTextField: UITextField!
-    
     @IBOutlet weak var dateTextField: UITextField!
-    
     @IBOutlet weak var locationTextField: UITextField!
-    
     @IBOutlet weak var hostTextField: UITextField!
-    
     @IBOutlet weak var descriptionTextField: UITextField!
-    
     @IBOutlet weak var capacityTextField: UITextField!
     
     var data:DataModel? = nil
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.navigationItem.title = "New Event"
 
         // Do any additional setup after loading the view.
+        self.titleTextField.delegate = self
+        dateTextField.delegate = self
+        locationTextField.delegate = self
+        hostTextField.delegate = self
+        descriptionTextField.delegate = self
+        capacityTextField.delegate = self
     }
 
     override func didReceiveMemoryWarning() {
@@ -36,20 +39,23 @@ class AddNewEventViewController: UIViewController {
     }
     
     @IBAction func saveEvent(sender: AnyObject) {
-        
+        // TODO: need to check nil
         data?.addEvent(title: titleTextField.text!, date: dateTextField.text!, location: locationTextField.text!, host: hostTextField.text!, description: descriptionTextField.text!, capacity: Int(capacityTextField.text!)!)
         
         navigationController?.popViewControllerAnimated(true)
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    
+    // dismiss the keyboard when touching anywhere
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        
+        self.view.endEditing(true)
     }
-    */
-
+    
+    // dismiss the keyboard when touching the return key
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        
+        textField.resignFirstResponder()
+        
+        return true
+    }
 }

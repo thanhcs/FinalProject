@@ -16,6 +16,7 @@ class UserViewController: UIViewController {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
+        self.navigationItem.title = "User mode"  // set to admin right now
     }
 
     override func didReceiveMemoryWarning() {
